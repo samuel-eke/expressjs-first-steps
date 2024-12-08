@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Company</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .houses-display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .house-card {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .house-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .house-card h2 {
+            margin-top: 0;
+        }
+
+        .house-card p {
+            margin-bottom: 20px;
+        }
+
+        .order-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .order-button:hover {
+            background-color: #555;
+        }
+
+        .features-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .features-section h2 {
+            margin-top: 0;
+        }
+
+        .features-section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .features-section li {
+            margin-bottom: 10px;
+        }
+
+        .testimonials-section {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .testimonials-section h2 {
+            margin-top: 0;
+        }
+
+        .testimonials-section blockquote {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Houses Display Section -->
+    <section class="houses-display">
+        <div class="house-card">
+            <img src="/imgs/alexander-sinn-rOxuWWhLxXU-unsplash.jpg" alt="House 1">
+            <h2>House 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed,
+                convallis ex.</p>
+            <button class="order-button">Place Order</button>
+        </div>
+        <div class="house-card">
+            <img src="/imgs/daniel-abadia-kn5i4gUyhYM-unsplash.jpg" alt="House 2">
+            <h2>House 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed,
+                convallis ex.</p>
+            <button class="order-button">Place Order</button>
+        </div>
+        <div class="house-card">
+            <img src="/imgs/daniel-abadia-kn5i4gUyhYM-unsplash.jpg" alt="House 3">
+            <h2>House 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed,
+                convallis ex.</p>
+            <button class="order-button">Place Order</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Features</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed,
+                convallis ex.</p>
+            <footer>John Doe, Customer</footer>
+        </blockquote>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed,
+                convallis ex.</p>
+            <footer>Jane Smith, Customer</footer>
+        </blockquote>
+    </section>
+
+</body>
+
+</html>
