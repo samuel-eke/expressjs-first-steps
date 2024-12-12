@@ -41,30 +41,15 @@ app.use(express.urlencoded({ extended: false })); //this middleware is used for 
 app.use(express.json());
 
 //this is for serving static files
-app.use(express.static(path.join(__dirname, "/public")));
+app.use("/", express.static(path.join(__dirname, "/public")));
+app.use("/subdir", express.static(path.join(__dirname, "/public"))); //this line of code, applies the css in the public folder to the routed subdirectory folder as well
 
-app.get("/", (request, response) => {
-  //   response.send("This is an express application"); //this simple line sends out a response to the user string-level
+app.use("/subdir", require("./routes/subdir"));
+app.use("/", require("./routes/root"));
+//requests for subdirectory routing
+app.use("/employees", require("./routes/api/employees"));
 
-  //   response.sendFile(path.join(__dirname, "views", "index.htm")); //this line sends out a response to the user with pictures and other static content. this is also how to serve with nodejs
-
-  response.sendFile("/views/index.htm", { root: __dirname });
-});
-
-app.get("/new-user", (req, resp) => {
-  resp.sendFile(path.join(__dirname, "views", "newuser.html"));
-});
-
-//to handle redirect of requests
-app.get("/not-user(.html)?", (req, resp) => {
-  resp.redirect(301, "/new-user"); //301 is status code for indicating that this is a permanent redirect
-});
-
-app.get("/*", (req, resp) => {
-  resp.status(404).sendFile(path.join(__dirname, "views", "404.html")); //this serves a custom 404 page for url paths that have not been created
-});
-
-app.use(handleError);
+app.use(handleError); //custom middleware for handling errors
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

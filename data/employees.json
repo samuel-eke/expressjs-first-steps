@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "firstname": "samuel",
+    "lastname": "eke"
+  },
+  {
+    "id": 2,
+    "firstname": "grant",
+    "lastname": "ebuka"
+  },
+  {
+    "id": 3,
+    "firstname": "james",
+    "lastname": "brown"
+  },
+  {
+    "id": 4,
+    "firstname": "william",
+    "lastname": "johnson"
+  },
+  {
+    "id": 5,
+    "firstname": "robert",
+    "lastname": "thomas"
+  },
+  {
+    "id": 6,
+    "firstname": "richard",
+    "lastname": "white"
+  },
+  {
+    "id": 7,
+    "firstname": "charles",
+    "lastname": "harris"
+  },
+  {
+    "id": 8,
+    "firstname": "christopher",
+    "lastname": "martin"
+  },
+  {
+    "id": 9,
+    "firstname": "matthew",
+    "lastname": "davis"
+  },
+  {
+    "id": 10,
+    "firstname": "anthony",
+    "lastname": "taylor"
+  },
+  {
+    "id": 11,
+    "firstname": "joseph",
+    "lastname": "walker"
+  },
+  {
+    "id": 12,
+    "firstname": "patrick",
+    "lastname": "hall"
+  }
+]
