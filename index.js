@@ -6,6 +6,7 @@ const path = require("path");
 const { logger } = require("./middleware/logevents");
 const handleError = require("./middleware/errorHandler");
 const cors = require("cors");
+const employeeRoutes = require("./routes/api/employees")
 
 //custom middleware logger
 // app.use((req, res, next) => {
@@ -44,10 +45,9 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "/public")));
 app.use("/subdir", express.static(path.join(__dirname, "/public"))); //this line of code, applies the css in the public folder to the routed subdirectory folder as well
 
+app.use("/employees", employeeRoutes);
 app.use("/subdir", require("./routes/subdir"));
-app.use("/", require("./routes/root"));
-//requests for subdirectory routing
-app.use("/employees", require("./routes/api/employees"));
+app.use("/", require("./routes/root"))
 
 app.use(handleError); //custom middleware for handling errors
 
