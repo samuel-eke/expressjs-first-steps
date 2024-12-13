@@ -35,6 +35,8 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "/public")));
 app.use("/subdir", express.static(path.join(__dirname, "/public"))); //this line of code, applies the css in the public folder to the routed subdirectory folder as well
 
+app.use("/login", require("./routes/auth"))
+app.use("/reg", require("./routes/register"))
 app.use("/employees", employeeRoutes);
 app.use("/subdir", require("./routes/subdir"));
 app.use("/", require("./routes/root"))
